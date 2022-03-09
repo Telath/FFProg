@@ -1,0 +1,15 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+home:
+  path: /
+  controller: App\Controller\HomeController::index
+
+liste:
+  path: /list
+  controller: App\Controller\ListeController::index
+
+progress:
+  path: /quest
+  controller: App\Controller\ProgressController::index

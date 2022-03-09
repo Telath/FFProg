@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="assets/css/liste.css" rel="stylesheet">
+{% endblock %}
+
+{% block title 'Liste de quêtes FF14' %}
+
+{% block body %}
+<h1>Liste de quêtes FF14</h1>
+<div class="row flex">
+{% for extensions in extension %}
+    <a href="{{ path('liste.show', {id: extensions.id}) }}">{{ extensions.name }}</a>
+    <p>niv. {{ extensions.levelMin }} à {{ extensions.levelMax }}</p>
+{% endfor %}
+</div>
+{% endblock %}

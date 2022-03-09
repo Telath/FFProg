@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="assets/css/listeQuest.css" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+
+<h1>{{ extensions.name }}</h1>
+
+
+<div class="row flex">
+{% for quests in quest %}
+    <div>
+        <p>{{ quests.title }}</p>
+        <p>niv.{{ quests.level }}</p>
+    </div>
+{% endfor %}
+</div>
+
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
